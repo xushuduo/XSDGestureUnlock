@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="zGp-3O-Y52">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opy-RD-ICW" customClass="LockView">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1DH-EE-7qS"/>
+                                    <constraint firstAttribute="height" constant="300" id="5yh-8R-DWC"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请绘制解锁图案" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wJ-g3-zcz">
+                                <rect key="frame" x="150" y="84" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Dv6-Uu-BQG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zGp-3O-Y52" secondAttribute="trailing" id="9KY-Uk-wBs"/>
+                            <constraint firstItem="zGp-3O-Y52" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Cjw-jT-3wc"/>
+                            <constraint firstItem="Opy-RD-ICW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DK0-oh-cyO"/>
+                            <constraint firstItem="7wJ-g3-zcz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X41-NT-HYL"/>
+                            <constraint firstItem="zGp-3O-Y52" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xnb-6O-h16"/>
+                            <constraint firstItem="7wJ-g3-zcz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZuG-Fz-XxR"/>
+                            <constraint firstItem="Opy-RD-ICW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cWS-f4-Adf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zGp-3O-Y52" secondAttribute="bottom" id="gKl-uh-qVF"/>
+                            <constraint firstItem="Opy-RD-ICW" firstAttribute="top" secondItem="7wJ-g3-zcz" secondAttribute="bottom" constant="45" id="iwJ-cr-seo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZuG-Fz-XxR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="lockView" destination="Opy-RD-ICW" id="bxf-tG-GJn"/>
+                        <outlet property="tipLabel" destination="7wJ-g3-zcz" id="9LG-tw-k41"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="402"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="540" height="960"/>
+    </resources>
+</document>
